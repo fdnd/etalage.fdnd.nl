@@ -1,5 +1,5 @@
 <div>
-  <a href="https://hva.nl/"><img src="https://logo.fdnd.nl/hva" alt="Hogeschool van Amsterdam" /></a>
+  <a href="https://hva.nl/" target="_blank"><img src="https://logo.fdnd.nl/hva" alt="Hogeschool van Amsterdam" /></a>
   <span>Frontend Design & Development</span>
 </div>
 
@@ -18,7 +18,7 @@
       display: block;
       padding-left: var(--gap);
       border-left: 1px solid currentColor;
-      width: calc(var(--size) * 5);
+      width: calc(var(--size) * 4.3);
       height: var(--size);
       line-height: var(--gap);
       font-size: calc(var(--size) / 2.2);

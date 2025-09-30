@@ -1,26 +1,32 @@
 body {
-  --grey: #ececec;
-  --purple: #c1aee8;
-  --blue: #05053f;
-  --green: #89e2c1;
-  --yellow: #fffc86;
+  --fdnd-grey: #ececec;
+  --fdnd-purple: #c1aee8;
+  --fdnd-blue: #05053f;
+  --fdnd-green: #89e2c1;
+  --fdnd-yellow: #fffc86;
   --angle: 42deg;
 
-  /* FDND Design tokens */
-  --fdnd-color-base: var(--purple);
-  --fdnd-color-background: var(--grey);
-  --fdnd-color-text: var(--blue);
-  --fdnd-color-button: var(--grey);
-
-  --fdnd-color-accent-1: var(--purple);
-  --fdnd-color-accent-2: var(--green);
-  --fdnd-color-accent-3: var(--yellow);
-
-  --fdnd-font-family: 'Open Sans', sans-serif;
+  --fdnd-color-base: var(--fdnd-purple);
+  --fdnd-color-background: var(--fdnd-grey);
+  --fdnd-color-text: var(--fdnd-blue);
+  --fdnd-color-button: var(--fdnd-grey);
+  --fdnd-color-accent-1: var(--fdnd-green);
+  --fdnd-color-accent-2: var(--fdnd-yellow);
 
   --fdnd-size-radius: 1.5rem;
   --fdnd-size-grid-column: calc(100vw / 24);
   --fdnd-size-padding: clamp(1rem, var(--fdnd-size-grid-column), 5rem);
+  --fdnd-size-gap: 1rem;
+
+  --fdnd-font-family: 'Open Sans', sans-serif;
+  --fdnd-font-xlarge: clamp(2.5rem, calc(64 / 60 * var(--fdnd-size-grid-column)), 5rem);
+  --fdnd-font-large: clamp(2rem, calc(52 / 60 * var(--fdnd-size-grid-column)), 4.375rem)
+  --fdnd-font-medium: clamp(1.5rem, calc(40 / 60 * var(--fdnd-size-grid-column)), 3.25rem);
+  --fdnd-font-base: clamp(1rem, calc(18 / 60 * var(--fdnd-size-grid-column)), 1.5rem);
+  --fdnd-font-small: clamp(0.75rem, calc(14 / 60 * var(--fdnd-size-grid-column)), 1.125rem);
+  --fdnd-font-weight-regular: 400;
+  --fdnd-font-weight-semibold: 550;
+  --fdnd-font-weight-bold: 600;
 
   --fdnd-shadow-dark: ;
   --fdnd-shadow-light: ;
@@ -55,19 +61,29 @@ body {
   background-color: var(--fdnd-color-base);
   color: var(--fdnd-color-text);
   font-family: var(--fdnd-font-family);
-  min-height: 100vw;
+  font-size: var(--fdnd-font-base);
+  letter-spacing: -0.04em;
+  line-height: 1.5;
+  min-height: 100vh;
 }
 
 header,
 main,
 footer {
-  padding: 0 var(--fdnd-size-padding);
+  padding-left: var(--fdnd-size-padding);
+  padding-right: var(--fdnd-size-padding);
 }
 
 main,
 footer {
   position: relative;
+  padding-top: var(--fdnd-size-gap);
+  padding-bottom: var(--fdnd-size-gap);
   background: var(--fdnd-color-background);
+}
+
+main {
+  margin-top: var(--fdnd-size-gap);
 }
 
 img {
