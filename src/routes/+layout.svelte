@@ -1,6 +1,6 @@
 <script>
 	import '$lib/assets/global.css'
-	import {HvaLogo} from '$lib';
+	import {HvaLogo, HvaPayoff} from '$lib';
 	import favicon from '$lib/assets/favicon.svg';
 
 	let { children } = $props();
@@ -32,7 +32,7 @@
 </main>
 
 <footer>
-	<img src="https://logo.fdnd.nl/payoff" alt="Creating Tomorrow">
+	<HvaPayoff />
 </footer>
 
 <style>
@@ -49,11 +49,41 @@
 	header img {
 		height: 3rem;
 	}
-
 	main {
-		display: grid;
-		/* grid-template-columns: 1fr 1fr; */
-		gap: var(--fdnd-size-gap);
+		container-type: inline-size;
 	}
-
+	div {
+		margin-bottom: var(--fdnd-size-gap);
+		p {
+			max-width: 30rem;
+		}
+	}
+	@container (width > 30rem) {
+		div {
+			--fdnd-size-cutout: calc(100% - var(--fdnd-size-padding) - var(--fdnd-size-gap) - 31rem)
+		}
+		div::before,
+		div::after {
+			position: absolute;
+			content: '';
+			top: 0;
+		}
+		div::before {
+			right: 0;
+			width: var(--fdnd-size-cutout);
+			height: 14rem;
+			background: var(--fdnd-color-base);
+			border-bottom-left-radius: var(--fdnd-size-radius);
+		}
+		div::after {
+			right: var(--fdnd-size-cutout);
+			width: calc(var(--fdnd-size-radius)*2);
+			aspect-ratio: 1/1;
+			border-top-right-radius: var(--fdnd-size-radius);
+			box-shadow: calc(var(--fdnd-size-radius)/3) calc(-1 * var(--fdnd-size-radius)/3) 0 0 var(--fdnd-color-base); 
+		}
+	}
+	footer {
+		padding-top: calc(var(--fdnd-size-gap)*4);
+	}
 </style>
