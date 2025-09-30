@@ -16,3 +16,10 @@
   {/if}
   
 </article>
+
+<style>
+  h3 {
+    font-size: var(--fdnd-font-medium);
+    margin-left: -.1em;
+  }
+</style>

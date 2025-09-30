@@ -24,6 +24,9 @@ studenten stap voor stap, samen de toekomst vormgeven.</p>
 </div>
 
 <style>
+  h2 {
+    font-size: var(--fdnd-font-large);
+  }
   div {
     display: grid;
 		gap: var(--fdnd-size-gap);

@@ -37,14 +37,11 @@
 
 <style>
 	h1 {
-		margin-left: -.1rem;
-		margin-bottom: var(--fdnd-size-gap);
+		margin: var(--fdnd-size-gap) 0;
+		margin-left: -.08em;
 		font-size: var(--fdnd-font-xlarge);
   	letter-spacing: -0.05em;
 		line-height: 1;
-		span {
-			display: block;
-		}
 	}
 	header img {
 		height: 3rem;
@@ -55,12 +52,12 @@
 	div {
 		margin-bottom: var(--fdnd-size-gap);
 		p {
-			max-width: 30rem;
+			max-width: 30em;
 		}
 	}
-	@container (width > 30rem) {
+	@container (width > 30em) {
 		div {
-			--fdnd-size-cutout: calc(100% - var(--fdnd-size-padding) - var(--fdnd-size-gap) - 31rem)
+			--fdnd-size-cutout: min(calc(100% - var(--fdnd-size-padding) - var(--fdnd-size-gap) - 31rem), 50%);
 		}
 		div::before,
 		div::after {

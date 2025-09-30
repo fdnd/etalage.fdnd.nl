@@ -20,7 +20,7 @@ body {
 
   --fdnd-font-family: 'Open Sans', sans-serif;
   --fdnd-font-xlarge: clamp(2.5rem, calc(64 / 60 * var(--fdnd-size-grid-column)), 5rem);
-  --fdnd-font-large: clamp(2rem, calc(52 / 60 * var(--fdnd-size-grid-column)), 4.375rem)
+  --fdnd-font-large: clamp(2rem, calc(52 / 60 * var(--fdnd-size-grid-column)), 4.375rem);
   --fdnd-font-medium: clamp(1.5rem, calc(40 / 60 * var(--fdnd-size-grid-column)), 3.25rem);
   --fdnd-font-base: clamp(1rem, calc(18 / 60 * var(--fdnd-size-grid-column)), 1.5rem);
   --fdnd-font-small: clamp(0.75rem, calc(14 / 60 * var(--fdnd-size-grid-column)), 1.125rem);
